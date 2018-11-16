@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>filter()</title>
+</head>
+<body>
+    <p>Das ist Paragraph 01.</p>
+    <p>Das ist Paragraph 02.</p>
+    <p class="test">Das ist Paragraph 03.</p>
+    <p class="test">Das ist Paragraph 04.</p>
+    <p>Das ist Paragraph 05.</p>
+
+
+    <!-- Suchfeld selbst bauen: -->
+    <input type="search" id="myInp">
+    <ul id="cities">
+        <li>Aachen</li>
+        <li>Berlin</li>
+        <li>Coburg</li>
+        <li>Dresden</li>
+        <li>Essen</li>
+    </ul>
+
+    <script>
+    
+        $(function(){
+
+            $('p').filter('.test').css('color', 'red');
+
+            $('#myInp').on('keyup', function(){
+
+                var inpVal = $(this).val().toLowerCase();
+
+                $('#cities>li').filter(function(){
+
+                    $(this).toggle($(this).text().toLowerCase().indexOf(inpVal) > -1);
+
+                });
+
+
+            });
+
+
+
+
+        });
+    </script>
+</body>
+</html>

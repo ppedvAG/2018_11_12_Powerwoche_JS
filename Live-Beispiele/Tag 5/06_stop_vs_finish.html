@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 2px solid midnightblue;
+        }
+
+        #demo01{
+            background-color: midnightblue;
+        }
+
+        button{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="btn-stop">Stop</button>
+    <button id="btn-finish">Finish</button>
+    <div id="demo01"></div>
+    <div id="demo02"></div>
+
+    
+
+    <script>
+        
+        $(function(){
+
+            $('#demo01').click(function(){
+                $('#demo02').slideToggle(5000);
+            });
+
+            $('#btn-stop').click(function(){
+                $('#demo02').stop();
+            });
+
+            $('#btn-finish').click(function(){
+                $('#demo02').finish();
+            });
+
+
+        });
+    
+    </script>
+</body>
+</html>

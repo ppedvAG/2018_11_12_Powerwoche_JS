@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Plugin</title>
+
+    <style>
+    
+        .bluebg{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="demo01">DemoDiv01</div>
+    <div id="demo02">DemoDiv02</div>
+    <div id="demo03">DemoDiv03</div>
+    <div id="demo04">DemoDiv04</div>
+    <div id="demo05">DemoDiv05</div>
+    <button id="btn-ok">OK</button>
+
+    <script>
+    
+        $(function(){
+
+            $.fn.makeBorder = function(){
+                this.css({
+                    border: '2px solid green',
+                    width: '200px'
+                });
+
+                return this;
+            }
+
+
+            /* $('#demo03').makeBorder(); */
+
+            $('#btn-ok').click(function(){
+
+                $('#demo03').makeBorder().addClass('bluebg');
+
+            });
+
+
+
+        });
+    </script>
+</body>
+</html>

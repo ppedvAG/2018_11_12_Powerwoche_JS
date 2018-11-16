@@ -1,0 +1,106 @@
+/* Universalselektor */
+/* 
+*{
+    margin: 0;
+    padding: 0;
+} 
+*/
+
+/* Typselektor */
+p{
+
+}
+
+/* Klassenselektor */
+.my-class{
+
+}
+
+p.my-class{
+
+}
+
+/* ID-Selektor */
+#my-ID{
+
+}
+
+
+/* td, th{
+    border: 1px solid black;
+} */
+
+/* Kombinatoren */
+/* Nachfahren-Kombinator (descendant-selector) */
+div span{
+    color: green;
+}
+
+/* Kind-Kombinator (child-selector) */
+div>span{
+    font-style: italic;
+}
+
+/* Benachbarter Geschwister Kombinator (sibling) */
+h1+p{
+    font-size: 28px;
+}
+
+/* Allgemeiner Geschwister-Kombinator */
+h1~p{
+    text-decoration: underline;
+}
+
+/* Attributselektoren */
+/*
+p[class="test-p"]{
+
+}
+p.test-p{}
+*/
+
+a[target]{
+    text-decoration: none;
+    color: brown;
+}
+
+/* Muss genau diesem Wert entsprechen. */
+a[target="_blank"]{
+
+}
+
+/* Muss mit folgenden Zeichen BEGINNEN: */
+div[id^="shadow"]{
+    width: 150px;
+    height: 150px;
+}
+
+/* #shadow01{
+
+}
+
+#shadow02{
+
+} */
+
+/* Muss mit folgenden Zeichen ENDEN */
+div[id$="ow"]{
+    width: 150px;
+    height: 150px;
+}
+
+/* Muss Zeichenfolge enthalten */
+div[id*="ow"]{
+    width: 150px;
+    height: 150px;
+}
+
+/* Muss bestimmtes Wort enthalten */
+div[id~="ow"]{
+    width: 150px;
+    height: 150px;
+}
+
+p:not(.test-p){
+    font-family: 'Courier New', Courier, monospace;
+}

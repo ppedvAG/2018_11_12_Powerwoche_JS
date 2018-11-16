@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrays</title>
+    <style>
+        #demo {
+            min-height: 50px;
+        }
+
+        button {
+
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <button id="btn-ok" onclick="textOutput();">Fruchtsalat</button>
+    <button onclick="addMango();">Plus Mango</button>
+    <button onclick="removeLast();">Letztes Weglöschen</button>
+    <button onclick="fillIn();">Einfüllen</button>
+    <button onclick="combineArrays();">Kombinieren</button>
+    <button onclick="alphabetical();">Ordnen</button>
+
+    <script>
+        var demo = document.getElementById('demo');
+
+        var fruitSalad = ['Banane', 'Apfel', 'Kiwi'];
+
+        //                   0         1        2
+        // length            1         2        3
+
+
+        function textOutput() {
+            demo.innerHTML = fruitSalad.join(', ');
+        }
+
+        function addMango() {
+            fruitSalad.push('Mango');
+            demo.innerHTML += "<br>" + fruitSalad.join(', ');
+        }
+
+        function removeLast(){
+            fruitSalad.pop();
+            demo.innerHTML += "<br>" + fruitSalad.join(', ');
+        }
+
+        function fillIn(){
+            fruitSalad.splice(1, 0, 'Birne', 'Erdbeere');
+            demo.innerHTML += "<br>" + fruitSalad.join(', ');
+        }
+
+
+
+        var citrusFruits = ['Orange', 'Kumquat', 'Mandarine'];
+        var allFruits = fruitSalad.concat(citrusFruits);
+
+        function combineArrays(){
+           demo.innerHTML += "<br>" + allFruits.join(', ');
+        }
+
+        function alphabetical(){
+            allFruits.sort();
+            demo.innerHTML += "<br>" + allFruits.join(', ');
+        }
+
+        demo.innerHTML += "<br>" + fruitSalad.length;
+        demo.innerHTML += "<br>" + fruitSalad[2];
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

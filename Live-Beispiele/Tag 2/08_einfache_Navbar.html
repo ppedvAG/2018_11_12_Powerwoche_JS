@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Navbar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 24px;
+        }
+
+        #company-name-container {
+            height: 120px;
+            background-color: darkorange;
+        }
+
+        /* leonardh@ppedv.de */
+
+        #main-nav-container {
+            background-color: lawngreen;
+            position: sticky;
+            top: 0;
+        }
+
+        #main-nav-ul {
+            margin: 0;
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+        li {
+            display: inline-block;
+
+
+
+        }
+
+        a {
+            text-decoration: none;
+            color: beige;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+            padding: 0.4em 1.5em;
+            display: inline-block;
+        }
+
+
+        a:hover {
+            color: darkgreen;
+            /* background-color: darkgreen; */
+        }
+
+        .active {
+            color: burlywood;
+        }
+
+        #content-container {
+            background-color: gray;
+            height: 180vh;
+            padding: 50px;
+        }
+
+        .text-box-container {
+            background-color: dodgerblue;
+            height: 100px;
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 15px;
+        }
+
+        #main-footer {
+            background-color: gold;
+            height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page-container">
+        <header id="company-name-container">
+
+        </header><!-- company-name-container END -->
+        <nav id="main-nav-container">
+
+            <ul id="main-nav-ul">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="07_flexbox.html">Flexbox</a></li>
+                <li><a href="05_Farben.html">Farben</a></li>
+                <li><a href="04_float.html">float</a></li>
+                <li><a href="../Tag 3/02_JS-Basics.html">JS-Basics</a></li>
+            </ul>
+
+        </nav><!-- main-nav END -->
+        <div id="content-container">
+            <div class="text-box-container">
+
+            </div><!-- text-box-container END -->
+            <div class="text-box-container">
+
+            </div><!-- text-box-container END -->
+            <div class="text-box-container">
+
+            </div><!-- text-box-container END -->
+        </div><!-- content-container END -->
+        <footer id="main-footer">
+
+        </footer><!-- main-footer END -->
+
+    </div><!-- page-container END -->
+
+</body>
+
+</html>

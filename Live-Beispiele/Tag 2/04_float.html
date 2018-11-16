@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>float</title>
+    <style>
+        .float-container {
+            background-color: aqua;
+            /* height: 500px; */
+        }
+
+        .float-item {
+            height: 150px;
+            width: 150px;
+            background-color: cadetblue;
+            border: 2px solid midnightblue;
+            float: left;
+        }
+
+        .clearboth {
+            clear: both;
+            /* background-color: red; */
+        }
+
+        /* ::after{
+            content: "";
+            display: block;
+            clear: both;
+        } */
+
+        .test {
+            background-color: brown;
+            height: 50px;
+        }
+
+        .inline-container {
+            background-color: darkgreen;
+        }
+
+        .inline-item {
+            background-color: aquamarine;
+            border: 2px solid chartreuse;
+            height: 150px;
+            width: 150px;
+            display: inline-block;
+            /* margin-right: 10px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="float-container">
+        <div class="float-item"></div>
+        <div class="float-item"></div>
+        <div class="float-item"></div>
+        <div class="float-item"></div>
+        <div class="float-item"></div>
+        <div class="float-item"></div>
+        <div class="float-item"></div>
+        <div class="float-item"></div>
+        <div class="float-item"></div>
+        <div class="clearboth"></div>
+    </div>
+
+    <div class="inline-container">
+        <div class="inline-item"></div>
+        <div class="inline-item"></div>
+        <div class="inline-item"></div>
+        <div class="inline-item"></div>
+        <div class="inline-item"></div>
+        <div class="inline-item"></div>
+        <div class="inline-item"></div>
+        <div class="inline-item"></div>
+        <div class="inline-item"></div>
+    </div>
+
+    <!-- <span class="test">Testtext</span> -->
+    test
+
+
+
+    test
+</body>
+
+</html>

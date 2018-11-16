@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>hide, slide, fade</title>
+    <style>
+        div{
+            height: 150px;
+            width: 150px;
+            background-color: aqua;
+            border: 2px solid midnightblue;
+            margin-bottom: 10px;
+        }
+
+        #btn-show{
+            margin: 10px 0;
+        }
+
+        #demo02{
+            display: none;
+        }
+
+        #demo03{
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="demo"></div>
+    <button id="btn-show">Show</button>
+    <div id="demo01">1</div>
+    <div id="demo02">2</div>
+    <div id="demo03">3</div>
+    <div id="demo04">4</div>
+    <div id="demo05">5</div>
+
+    <p>Das ist Paragraph Nr. 1.</p>
+    <p>Das ist Paragraph Nr. 2.</p>
+    <p>Das ist Paragraph Nr. 3.</p>
+    <p>Das ist Paragraph Nr. 4.</p>
+    <p>Das ist Paragraph Nr. 5.</p>
+    <p>Das ist Paragraph Nr. 6.</p>
+    <p>Das ist Paragraph Nr. 7.</p>
+    <p>Das ist Paragraph Nr. 8.</p>
+
+    <input type="text" id="first-name">
+
+    <script>
+        $(document).ready(function(){
+
+            $('#demo').click(function(){
+                $(this).hide();
+            });
+
+            $('p').click(function(){
+                $(this).hide();
+            });
+
+            /* $('#btn-show').click(function(){
+                $('#demo').show();
+            }); */
+
+            $('#btn-show').click(function(){
+                $('#demo').toggle();
+            });
+
+
+            $('#demo01').mouseleave(function(){
+                $(this).fadeOut(2000);
+            });
+
+            /* $('#btn-show').click(function(){
+                $('#demo02').fadeIn();
+            }); */
+
+            $('#demo03').dblclick(function(){
+                $(this).next().slideUp(2000, function(){
+                    alert('Fertig! :)');
+                });
+            });
+
+            /* $('#demo05').click();
+            $('#demo05').dblclick();
+            $('#demo05').mouseleave(); */
+
+            /* document.getElementById('#demo05').addEventListener('click', functionName); */
+            /* document.getElementById('#demo05').style.backgroundColor = "green"; */
+            $('#demo05').on({
+                click: function(){
+                    $(this).css('background-color', 'green');
+                },
+
+                mouseenter: function(){
+                    $(this).css('color', 'white');
+                },
+
+                mouseleave: function(){
+                    $(this).css('color', 'initial');
+                }
+            });
+
+            $('#demo04').click(function(){
+                $(this).css({
+                    backgroundColor: 'red',
+                    color: 'midnightblue',
+                    width: '300px'
+                });
+            });
+
+
+            /* document.getElementById('first-name').value; */
+
+            /* 
+            $('#first-name').val();
+            */
+
+            /*
+            .blur()
+            .focus()
+            */
+
+
+
+        });
+    </script>
+</body>
+</html>

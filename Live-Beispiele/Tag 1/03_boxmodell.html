@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Boxmodell</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        div {
+            width: 150px;
+            height: 150px;
+            background-color: aqua;
+        }
+
+        #box-demo2 {
+            border-width: 10px;
+            border-style: solid;
+            border-color: chartreuse;
+        }
+
+        #box-demo3 {
+            border-width: 10px;
+            border-style: solid;
+            border-color: chartreuse;
+            padding: 20px;
+        }
+
+        #box-demo4 {
+            border-width: 10px;
+            border-style: solid;
+            border-color: chartreuse;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #box-demo5 {
+            /* 
+            border-width: 10px;
+            border-style: solid;
+            border-color: chartreuse; 
+            */
+            /* shorthand property: */
+            border: 10px dotted midnightblue;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #box-demo6 {
+            /* 
+            padding-top: 20px;
+            padding-right: 50px;
+            padding-bottom: 30px;
+            padding-left: 0; 
+            */
+
+            padding: 20px 50px 30px 10px;
+
+        }
+
+        #box-demo7 {
+            height: initial;
+            /* padding: 20px 50px 20px 50px; */
+            /* padding: 20px 50px 10px; */
+
+            border: 2px solid midnightblue;
+            padding: 20px 50px;
+
+        }
+
+        #box-demo8, #box-demo9{
+            border: 2px solid midnightblue;
+        }
+
+        #box-demo8{
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #box-demo9{
+            width: 100%;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="box-demo1">1</div>
+    <div id="box-demo2">2</div>
+    <div id="box-demo3">3</div>
+    <div id="box-demo4">4</div>
+    <div id="box-demo5">5</div>
+    <div id="box-demo6">6 - Testtext Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Aspernatur, fuga!
+    </div>
+    <div id="box-demo7">7 - Testtext Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Aspernatur, fuga!
+    </div>
+
+    <hr>
+
+    <div id="box-demo8"></div>
+    <div id="box-demo9"></div>
+</body>
+
+</html>

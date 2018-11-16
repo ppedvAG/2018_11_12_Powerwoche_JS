@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objekte</title>
+</head>
+<body>
+
+    <div id="demo"></div>
+    <script>
+        
+        var demo = document.getElementById('demo');
+
+        /* var Person = {
+            firstName: 'James',
+            lastName: 'Bond',
+            customerId: '007',
+            age: 40,
+            fullName: function(){
+               return this.firstName + this.lastName;
+            }
+        }
+
+        demo.innerHTML = "Vorname: " + Person.firstName;
+        demo.innerHTML += "<br/>Nachname: " + Person['lastName'];
+        demo.innerHTML += "<br/>Voller Name: " + Person.fullName(); */
+
+        /* Konstruktor */
+
+        function Person(cid, fn, ln, a){
+            this.customerId = cid;
+            this.firstName = fn;
+            this.lastName = ln;
+            this.age = a;
+        }
+
+        var Leo = new Person('001', 'Leonard', 'Hlavin', 37);
+
+        function Car(model, driver){
+            this.model = model;
+            this.driver = driver;
+        }
+
+        var CompanyCar1 = new Car('BMW', Leo);
+    
+        demo.innerHTML = 'Fahrer: ' + CompanyCar1.driver.firstName;
+
+        /* document.getElementById('demo').style.backgroundColor = "green"; */
+
+    </script>
+</body>
+</html>

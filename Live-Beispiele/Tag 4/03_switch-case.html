@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Switch-Case</title>
+    <style>
+        #demo{
+            height: 150px;
+            width: 40%;
+            border: 2px solid black;
+            margin-top: 10px;
+            background-image: url(../../images/bild_klein.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="dayOfWeek">
+    <button id="btn-ok" onclick="textOutput();">OK</button>
+    <div id="demo"></div>
+
+    <script>
+
+        var inp = document.getElementById('dayOfWeek');
+        var demo = document.getElementById('demo');
+        var text = "";
+
+        function textOutput(){
+            var choice = inp.value.toLowerCase();
+
+            switch(choice){
+                case 'montag':
+                    text = "Das ist der schwerste Arbeitstag!";
+                    break;
+                case 'dienstag':
+                    text = "Das ist ein normaler Arbeitstag.";
+                    break;
+                case 'sonntag':
+                    text = "Juchuuuuu, Wochenende!";
+                    break;
+                default:
+                    text = "Bitte geben Sie einen Wochentag ein.";
+            }
+
+            demo.innerHTML = text;
+        }
+    </script>
+</body>
+</html>

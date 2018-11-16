@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formularelemente</title>
+    <style>
+        .lbl-inp-container{
+            margin-bottom: 10px;
+        }
+
+        .my-lbls{
+            display: inline-block;
+            width: 100px;
+        }
+
+        form{
+            width: fit-content;
+            background-color: aqua;
+            /* padding: 50px; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="#" method="POST">
+
+        <div class="lbl-inp-container">
+            <label for="first-name" class="my-lbls">Vorname:</label>
+            <input type="text" id="first-name" class="my-inputs" name="first-name" placeholder="James">
+        </div>
+        <div class="lbl-inp-container">
+            <label for="last-name" class="my-lbls">Nachname:</label>
+            <input type="text" id="last-name" class="my-inputs" name="last-name" placeholder="Bond">
+        </div>
+        <div class="lbl-inp-container">
+            <label for="pw" class="my-lbls">Passwort:</label>
+            <input type="password" id="pw" class="my-inputs" name="pw">
+        </div>
+        <div class="lbl-inp-container">
+            <label for="email" class="my-lbls">E-Mail:</label>
+            <input type="email" id="email" class="my-inputs" name="email">
+        </div>
+        <div class="lbl-inp-container">
+            <label for="homepage" class="my-lbls">Homepage:</label>
+            <input type="url" id="homepage" class="my-inputs" name="homepage" title="Bitte geben Sie https:// ein..."
+                value="https://" placeholder="https://">
+        </div>
+        <div class="lbl-inp-container">
+            <label for="age" class="my-lbls">Alter:</label>
+            <input type="number" id="age" class="my-inputs" name="age" min="1" max="120" step="1">
+        </div>
+        <div class="lbl-inp-container">
+            <label for="color" class="my-lbls">Lieblingsfarbe:</label>
+            <input type="color" id="color" class="my-inputs" name="color">
+        </div>
+        <div class="lbl-inp-container">
+            <label for="range" class="my-lbls">Range:</label>
+            <input type="range" id="range" class="my-inputs" name="range" min="30" max="150" step="10"
+                value="60" title="60" onchange="myFunction();">
+        </div>
+        <div class="lbl-inp-container">
+            <input type="submit" value="Abschicken">
+            <input type="reset">
+        </div>
+    </form>
+
+<!-- <pre>
+Hat der alte Hexenmeister
+sich doch einmal wegbegeben
+</pre> -->
+
+
+</body>
+
+</html>

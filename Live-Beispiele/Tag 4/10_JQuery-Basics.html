@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="10_JS-Basics.js"></script>
+    <title>Document</title>
+    <style>
+        #demo{
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+        }
+    
+    </style>
+</head>
+<body>
+    
+    <div id="demo"></div>
+
+    <script>
+        /*
+        $ = jQuery
+
+        Syntax:
+
+        $('selector').action();
+
+        */
+
+       /* Vergleich JS/ jQuery
+    
+       document.getElementById('demo');
+
+       $('#demo')
+
+       $('.my-class')
+       $('div')
+       $('h1~p')
+       $('a[target="_blank"]')
+       $('tbody>tr:nth-child(even)')
+       
+       */
+
+       $(document).ready(function(){
+
+           $('#demo').click(function(){
+
+               $(this).hide();
+
+           });
+
+           
+
+
+
+
+
+       });
+
+
+    </script>
+</body>
+</html>

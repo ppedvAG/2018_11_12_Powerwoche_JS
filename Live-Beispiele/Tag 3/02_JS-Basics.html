@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS-Basics</title>
+    <link rel="stylesheet" href="02_JS-Basics.css">
+    <script src="02_JS-Basics.js" defer></script>
+    <style>
+        #demo{
+            border: 2px solid midnightblue;
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+        <noscript>Bitte aktivieren Sie JS in Ihrem Browser!</noscript>
+
+    <!-- <a href="javascript:history.back()">Zurück</a> -->
+    <div id="demo"></div>
+    <br><!-- nicht schön!!!! -->
+    <input type="text" id="first-name">
+    <button onclick="myOutput();">Input</button>
+    <br><!-- nicht schön!!! -->
+    <button onclick="myFunction();">OK</button>
+    <div id="demo-par">Lorem ipsum dolor sit amet.</div>
+    <button onclick="divContents();">Auslesen</button>
+
+
+    <script>
+
+        /* Variablendeklaration */
+        var x;
+        /* var i, text, abc; */
+        var i, text, abc = "abc";
+
+
+        /* Konstanten */
+        const mwst = 0.19;
+
+
+        /* Initialisierung */
+        x = 5;
+
+
+        /* Bezeichner (identifier) */
+        // Buchstabe, $, _
+        // KEINE Leerzeichen im Namen!
+
+        /*console.log(typeof x); */
+
+        var y = 5;
+
+        var text = "5";
+
+        var z = x + y;
+
+        /* 
+        x = x + 2;
+
+
+        x += 2; 
+
+        7
+        9
+        11
+        */
+
+        
+
+        console.log('x plus text ist: ' + (x + text));
+
+        console.log('Der Wert von z ist ' + z);
+
+       
+
+        /* Datentypen */
+        // string 
+        //          "Das ist ein String."
+        //          "Das ist ein 'String'."
+        //          'Das ist ein "String".'
+        //          'Das ist ein String.'
+
+        // number
+        //          5, 6,... 5.3, 7.2,..... 
+        //          123e5 = 123*10^5 = 12300000
+        //          123e-5 = 123*10^-5 = 0.00123
+
+        //function
+
+        //object
+        // auch NULL IST EIN OBJECT!!!
+
+        //boolean (true/false)
+
+        //undefined
+
+
+
+        // einzeilige Kommentare
+        /* mehrzeilige Kommentare */
+
+        console.log('Test');
+
+        function myFunction(){
+            alert('Das ist eine WAAAARNUNG!!!');
+        }
+
+
+        var myDemoDiv = document.getElementById('demo');
+
+        /* console.log(typeof myDemoDiv); */
+
+        /* document.getElementById('demo').style.backgroundColor = "red"; */
+        myDemoDiv.style.backgroundColor = "red";
+
+        /* 
+        == 'red'
+        == 'rgb(255, 0, 0)'
+        */
+
+        var firstName = document.getElementById('first-name');
+
+        function myOutput(){
+            console.log(firstName.value);
+        }
+
+        var myDiv = document.getElementById('demo-par');
+
+
+        function divContents(){
+            console.log(myDiv.innerHTML);
+            myDiv.innerHTML += "<p>Testtext</p>";
+            console.log(myDiv.innerHTML);
+        }
+
+        /* 
+            lorem
+            innerHTML += x;
+            lorem
+            x
+            innerHTML += x;
+            lorem
+            x
+            x
+            innerHTML += x;
+            lorem
+            x
+            x
+            x
+        
+        */
+        
+        
+        
+
+        
+    </script>
+</body>
+
+</html>

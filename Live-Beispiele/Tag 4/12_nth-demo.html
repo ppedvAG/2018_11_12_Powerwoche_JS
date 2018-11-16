@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nth-Demo</title>
+    <style>
+        /* 
+        p:nth-child(3){
+            color: red;
+        } 
+        */
+
+        /* odd = ungerade; even = gerade */
+        /* p:nth-child(3n + 2){
+            color: red;
+        } */
+
+        p:nth-child(odd) {
+            color: red;
+        }
+
+        p:nth-of-type(odd) {
+            font-style: italic;
+        }
+
+        .blue {
+            height: 20px;
+            width: 20px;
+            background-color: blue;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        tbody>tr:nth-child(odd) {
+            background-color: aquamarine;
+        }
+
+        tbody>tr:nth-child(even) {
+            background-color: rgb(224, 255, 245);
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+        }
+
+        /* th{
+            background-color: darkgreen;
+            color: whitesmoke;
+        } */
+    </style>
+</head>
+
+<body>
+    <p>Das ist der 1.Paragraph.</p>
+    <p>Das ist der 2.Paragraph.</p>
+    <p>Das ist der 3.Paragraph.</p>
+    <div class="blue"></div>
+    <p>Das ist der 4.Paragraph.</p>
+    <p>Das ist der 5.Paragraph.</p>
+    <p>Das ist der 6.Paragraph.</p>
+    <p>Das ist der 7.Paragraph.</p>
+    <p>Das ist der 8.Paragraph.</p>
+    <p>Das ist der 9.Paragraph.</p>
+
+
+
+
+    <table>
+        <tbody>
+            <tr>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+            </tr>
+            <tr>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+            </tr>
+            <tr>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+            </tr>
+            <tr>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+            </tr>
+            <tr>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <thead>
+            <tr>
+                <th>testtext</th>
+                <th>testtext</th>
+                <th>testtext</th>
+                <th>testtext</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+            </tr>
+            <tr>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+            </tr>
+            <tr>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+            </tr>
+            <tr>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+            </tr>
+            <tr>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">testtext</td>
+            </tr>
+        </tfoot>
+        </tbody>
+    </table>
+</body>
+
+</html>

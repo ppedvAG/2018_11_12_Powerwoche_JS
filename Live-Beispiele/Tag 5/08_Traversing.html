@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Traversing</title>
+</head>
+<body>
+    <div id="container">
+        <div id="demo01">Demo-Div01</div>
+        <h2>Das ist eine h2 Überschrift</h2>
+        <div id="demo02">Demo-Div02</div>
+        <div id="demo03">Demo-Div03</div>
+        <div id="demo04">Demo-Div04</div>
+        <p>Das ist ein Paragraph.</p>
+        <h2>Das ist eine h2 Überschrift</h2>
+        <div id="demo05">Demo-Div05</div>
+        <div id="demo-container">
+            <div id="inner-div01">Inner-Div01</div>
+            <div id="inner-div02">Inner-Div02</div>
+            <div id="inner-div03">Inner-Div03</div>
+        </div>
+    </div>
+    <p class="par">Das ist ein Paragraph.</p>
+    <p class="par">Das ist ein Paragraph.</p>
+    <p class="par">Das ist ein Paragraph.</p>
+
+    <script>
+        $(function(){
+
+            $('#inner-div01').next().css('background-color', 'green');
+
+            $('#demo03').siblings().css('color', 'darkorange');
+
+            $('#demo03').siblings('h2').css('color', 'blue');
+
+            $('#demo03').nextAll().css('font-style', 'italic');
+
+            $('#demo03').nextUntil('h2').css('text-decoration', 'underline');
+
+            /* 
+            .prev()
+            .prevAll()
+            .prevUntil()
+
+            .children()
+            .parent()
+            */
+
+        });
+    </script>
+
+</body>
+</html>

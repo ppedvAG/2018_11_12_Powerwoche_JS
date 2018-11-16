@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulare</title>
+    <style>
+        /* textarea{
+            resize: none;
+        } */
+        .lbl-inp-container{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="#" method="POST">
+
+        <div class="lbl-inp-container">
+            <label for="first-name" class="my-lbls">Vorname:</label>
+            <input type="text" id="first-name" class="my-inputs" name="first-name" placeholder="James" required>
+        </div>
+        <div class="lbl-inp-container">
+            <label for="first-name" class="my-lbls">Vorname:</label>
+            <input type="text" id="first-name" class="my-inputs" name="first-name" placeholder="James" disabled>
+        </div>
+        <div class="lbl-inp-container">
+            <label for="first-name" class="my-lbls">Test:</label>
+            <input type="text" id="first-name" class="my-inputs" name="first-name" pattern="\d{5}">
+        </div>
+
+        <textarea name="" id="" cols="30" rows="10" placeholder="Bitte geben Sie hier Ihre Wünsche ein..."></textarea>
+        <br /><!-- FAUL!!! -->
+        <select name="pizzas" id="pizzas">
+            <option value="Margherita">Margherita</option>
+            <option value="Tonno">Tonno</option>
+            <option value="DellaCasa">Della Casa</option>
+            <option value="Funghi">Funghi</option>
+        </select>
+        <br />
+        <fieldset>
+            <legend>Pizzas</legend>
+            <div class="lbl-inp-container">
+                <input type="radio" name="pizze" checked>
+                <label>Margherita</label>
+            </div>
+            <div class="lbl-inp-container">
+                <input type="radio" name="pizze">
+                <label>Tonno</label>
+            </div>
+            <div class="lbl-inp-container">
+                <input type="radio" name="pizze">
+                <label>Della Casa</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Extras</legend>
+            <div class="lbl-inp-container">
+                <input type="checkbox" name="extras">
+                <label>Mais</label>
+            </div>
+            <div class="lbl-inp-container">
+                <input type="checkbox" name="extras">
+                <label>Mozzarella</label>
+            </div>
+            <div class="lbl-inp-container">
+                <input type="checkbox" name="extras">
+                <label>Rucola</label>
+            </div>
+        </fieldset>
+        <div class="lbl-inp-container">
+            <input type="submit" value="Abschicken">
+            <input type="reset">
+        </div>
+    </form>
+
+</body>
+
+</html>

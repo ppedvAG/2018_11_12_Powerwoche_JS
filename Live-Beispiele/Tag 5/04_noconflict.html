@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        #demo {
+            height: 150px;
+            width: 150px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="demo"></div>
+
+    <script>
+
+        $.noConflict();
+
+        /* var jq = $.noConflict(); */
+
+        /* jQuery(document).ready(function(){
+            jQuery('#demo').click(function(){
+                jQuery(this).hide();
+            });
+        }); */
+
+        /* jq(document).ready(function(){
+            jq('#demo').click(function(){
+                jq(this).hide();
+            });
+         */
+
+        jQuery(document).ready(function ($) {
+            $('#demo').click(function () {
+                $(this).hide();
+            });
+        });
+
+        /* 
+        $(function(){
+            //toller jQuery-Code
+        }); 
+        */
+
+
+
+    </script>
+</body>
+
+</html>

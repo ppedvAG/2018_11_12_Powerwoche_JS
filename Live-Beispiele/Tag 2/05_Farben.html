@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Farben</title>
+    <style>
+        body {
+            /* background-color: red; */
+        }
+
+        div {
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+        }
+
+        #test01 {
+            background-color: blue;
+        }
+
+        #test02 {
+            background-color: rgb(0, 0, 255);
+        }
+
+        #test03 {
+            background-color: #0000ff;
+        }
+
+        #test04 {
+            background-color: rgba(0, 0, 255, 0.5);
+        }
+
+        #test05 {
+            background-color: blue;
+            opacity: 0.4;
+        }
+
+        #test05:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        #test06{
+            visibility: hidden;
+            /* visibility: visible; */
+        }
+
+        #test07{
+            display: none;
+            /* display: block; */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="test01">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div id="test02">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div id="test03">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div id="test04">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <a href="#">
+        <div id="test05">
+            Lorem ipsum dolor sit amet.
+        </div>
+    </a>
+    <div id="test06">6</div>
+    <div id="test07">7</div>
+    <!-- 
+        rgb-Schreibweise
+
+        rgb (--- , --- , ---)
+             red, green, blue
+
+        rgb (0, 0, 255)     == blue
+
+
+        Hex(adezimal)-Schreibweise
+        #_ _ _ _ _ _
+        red/green/blue
+
+        #0000FF  == blue
+
+        0123456789ABCDEF
+
+        15*16^1 + 15*16^0
+        240     +   15
+        255
+    
+    -->
+</body>
+
+</html>
